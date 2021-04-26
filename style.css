@@ -1,0 +1,47 @@
+.body{
+    font-family: sans-serif;
+    font-size: 10pt;
+    text-align: center;
+    
+}
+
+.pageTitle {
+    text-align: center;
+
+}
+
+.animalImg {
+    align-items: center;
+    width: 150px;
+    height: 150px;
+    border: solid black 1px;
+    border-radius: 150px;
+}
+
+.form {
+    
+    text-align: center;
+    border: solid black 1px;
+    width: 300px;
+    margin-left: 550px;
+    margin-top: 20px;
+}
+.chooseAimal {
+    font-size: 15px;
+}
+
+.formHelp {
+    font-size: 12px;
+}
+
+positioning .h1 {
+    text-align: center;
+}
+
+positioning .h2 {
+    text-align: center;
+}
+
+.returnInfo {
+    text-align: center;
+}
