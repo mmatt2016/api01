@@ -1,30 +1,25 @@
 const baseURL = `https://cat-fact.herokuapp.com`;
-let submitBtn = document.getElementById('.submitBtn');
+let submitBtn = document.getElementById('submitBtn');
 let animalChoice = document.querySelector('.animalOptions');
 let form = document.querySelector('.form');
 let factResults = document.querySelector(".returnInfo");
 
-submitBtn.addEventListener('click', fetchResults());
-function fetchResults(e) {
+submitBtn.addEventListener('click', (e) => {
     e.preventDefault();
     console.log(e);
-    url = baseURL + 'facts' + 'random?animal_type=' + animalChoice.value + "&amount=1";
-}
-    
-function displayResults() {
-    fetch('url') 
-    .then(response => response.text())
+
+
+    fetch(`https://cat-fact.herokuapp.com/facts/random?animal_type=${animalChoice.value}&amount=1`) 
+    .then(response => response.json())
     .then(data => {
-        let finalResults = JSON.parse(data).text;
+        let finalResults = data.text;
         console.log(finalResults);
         let paragraph = document.createElement("p");
-        let node = document.createTextNode(facts);
-        paragraph.appendChild(node);
-        facts.appendChild(paragraph);
+        paragraph.innerText= finalResults;
+        factResults.appendChild(paragraph);
     
-        
     })
-}
+})
 
 
 
